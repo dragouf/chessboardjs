@@ -2,7 +2,7 @@
   "author": "Chris Oakman <chris@oakmac.com> (http://chrisoakman.com/) modified by dragouf (https://github.com/dragouf/)",
   "name": "chessboard.module.js",
   "description": "JavaScript chessboard widget",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/dragouf/chessboardjs.git"
