@@ -4,6 +4,15 @@ chessboard.js is a JavaScript chessboard component. It depends on [jQuery].
 
 Please see [chessboardjs.com] for documentation and examples.
 
+NOTE : this version export a module to use it with import statement (for example in angular)
+
+## Install
+
+npm install chessboard.js
+
+## Import
+import * as Chessboard from 'chessboard.js';
+
 ## What is chessboard.js?
 
 chessboard.js is a JavaScript chessboard component with a flexible "just a

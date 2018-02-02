@@ -1,20 +1,15 @@
 {
-  "author": "Chris Oakman <chris@oakmac.com> (http://chrisoakman.com/)",
-  "name": "oakmac-chessboard",
+  "author": "Chris Oakman <chris@oakmac.com> (http://chrisoakman.com/) modified by dragouf (https://github.com/dragouf/)",
+  "name": "chessboard.js",
   "description": "JavaScript chessboard widget",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/oakmac/chessboardjs.git"
+    "url": "git://github.com/dragouf/chessboardjs.git"
   },
   "main": "src/chessboard.js",
   "dependencies": {
     "jquery": ">=1.8.3"
-  },
-  "devDependencies": {
-    "kidif": "1.1.0",
-    "mustache": "2.3.0",
-    "standard": "10.0.2"
   },
   "scripts": {
     "test": "mocha"

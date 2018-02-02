@@ -6,10 +6,11 @@
 // https://github.com/oakmac/chessboardjs/blob/master/LICENSE.md
 
 // start anonymous scope
-;(function () {
+var Chessboard = function () {
   'use strict'
 
-  var $ = window['jQuery']
+  //var $ = jQuery;
+  var $ = require("jquery");
 
   // ---------------------------------------------------------------------------
   // Constants
@@ -292,8 +293,7 @@
   }
 
   function validJQueryVersion () {
-    return typeof window.$ &&
-           $.fn &&
+    return $.fn &&
            $.fn.jquery &&
            validSemanticVersion($.fn.jquery, MINIMUM_JQUERY_VERSION)
   }
@@ -576,7 +576,7 @@
     // default piece theme is wikipedia
     if (!config.hasOwnProperty('pieceTheme') ||
         (!isString(config.pieceTheme) && !isFunction(config.pieceTheme))) {
-      config.pieceTheme = 'img/chesspieces/wikipedia/{piece}.png'
+      config.pieceTheme = '/assets/img/chesspieces/wikipedia/{piece}.png'
     }
 
     // animation speeds
@@ -1806,12 +1806,19 @@
   } // end constructor
 
   // TODO: do module exports here
-  window['Chessboard'] = constructor
+  //window['Chessboard'] = constructor
 
   // support legacy ChessBoard name
-  window['ChessBoard'] = window['Chessboard']
+  //window['ChessBoard'] = window['Chessboard']
 
   // expose util functions
-  window['Chessboard']['fenToObj'] = fenToObj
-  window['Chessboard']['objToFen'] = objToFen
-})() // end anonymous wrapper
+  //window['Chessboard']['fenToObj'] = fenToObj
+  //window['Chessboard']['objToFen'] = objToFen
+  return constructor;
+}; // end anonymous wrapper
+
+/* export Chessboard object if using node or any other CommonJS compatible
+ * environment */
+if (typeof exports !== 'undefined') exports.Chessboard = Chessboard();
+/* export Chessboard object for any RequireJS compatible environment */
+if (typeof define !== 'undefined') define( function () { return Chessboard();  });
