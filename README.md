@@ -8,10 +8,14 @@ NOTE : this version export a module to use it with import statement (for example
 
 ## Install
 
-npm install chessboard.module.js
+```npm install chessboard.module.js```
 
 ## Import
-import * as Chessboard from 'chessboard.module.js';
+
+```import * as Chessboard from 'chessboard.module.js';```
+
+usage:
+```var board = Chessboard('board');```
 
 ## What is chessboard.js?
 
